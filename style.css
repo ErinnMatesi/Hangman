@@ -1,0 +1,79 @@
+:root{
+    --black: #171A1C;
+    --blue: #AFBFDC;
+    --green: #4E873D;
+}
+
+body {
+    background-color: var(--blue);
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    background: var(--black);
+}
+
+h1 {
+    color: white;
+    font-size: 300%;
+    padding-bottom: 15px;
+}
+
+button {
+    background-color: var(--green);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8%;
+    font-size: 150%;
+}
+
+#gameWrapper {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 25px;
+}
+
+#gameSection {
+    background: var(--green);
+    border: 4px solid var(--black);
+    border-radius: 5px;
+    color: white;
+    font-size: 300%;
+    padding: 15px 5px 10px 5px;
+    text-align: center;
+    height: 40vh;
+    width: 60vw;
+    margin-top: 15px;
+    box-shadow: 5px 5px gray;
+}
+
+#hiddenWord {
+    margin-top: 40px;
+    letter-spacing: 2;
+}
+
+#scoreboard {
+    background: var(--green);
+    border: 4px solid var(--black);
+    border-radius: 5px;
+    color: white;
+    padding: 15px 5px 10px 5px;
+    height: 40vh;
+    width: 30vw;
+    margin-top: 15px;
+    box-shadow: 5px 5px gray;
+}
+
+#timer {
+    background: var(--blue);
+    color: var(--black);
+    padding: 5px;
+    line-height: 2;
+}
