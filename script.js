@@ -17,6 +17,16 @@ var letters = words[randWords].split("");
 // starting time
 var timeLeft = 12;
 
+function checkWin() {
+    var wordSoFar = hiddenWord.textContent;
+    console.log(wordSoFar);
+    if (wordSoFar.includes('_')) {
+        return 
+    } else {
+        alert('You win!');
+    }
+}
+
 var playerInput = function(event) {
     var keyPress = event.key;
     for (var i = 0; i < letters.length; i++) {
@@ -25,6 +35,8 @@ var playerInput = function(event) {
             var oldContent = hiddenWord.textContent.split("");
             oldContent[i] = keyPress;
             hiddenWord.textContent = oldContent.join("");
+
+            checkWin();
             // letter that matches the keyPress, replaces the underscore. textContent has to update. 
         }
     }
