@@ -38,14 +38,15 @@ var playerInput = function(event) {
 
         if (keyPress === letters[i]) {
             var oldContent = hiddenWord.textContent.split("");
+            // matching the correct "_" to the corresponding letters index
             oldContent[i] = keyPress;
             hiddenWord.textContent = oldContent.join("");
 
             checkWin();
             // letter that matches the keyPress, replaces the underscore. textContent has to update. 
-        }
-    }
-}
+        };
+    };
+};
 
 document.addEventListener("keydown", playerInput);
 
@@ -56,15 +57,15 @@ startGame.addEventListener("click", function(){
         if (timeLeft > 0) {
             timeLeft--;
         } else {
+            hiddenWord.textContent = "GAME OVER";
             clearInterval(countDown);
         };
-    
     }, 1000);
     hiddenWord.textContent = "";
     for (var i = 0; i < letters.length; i++) {
         hiddenWord.textContent = hiddenWord.textContent + "_";
     };
-    
-})
+});
+
 
 // countdown and playerInput need to be wrapped into one function I think
