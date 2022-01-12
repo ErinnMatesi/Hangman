@@ -17,6 +17,9 @@ var letters = words[randWords].split("");
 // starting time
 var timeLeft = 12;
 
+// Game Wins
+var gameWins = localStorage.getItem('wins') || 0;
+
 function checkWin() {
     var wordSoFar = hiddenWord.textContent;
     console.log(wordSoFar);
@@ -24,7 +27,9 @@ function checkWin() {
         return 
     } else {
         alert('You win!');
-    }
+        gameWins++;
+        localStorage.setItem('wins', gameWins);
+    } 
 }
 
 var playerInput = function(event) {
